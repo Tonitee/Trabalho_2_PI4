@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+input {
+    font: menu;
+    font-size: 24px;
+    text-align: center;
+}

@@ -1,0 +1,12 @@
+<h2>Cadastro de Produto</h2>
+<div class="painel">
+<p style="font: menu; font-size: 18px; margin: 5px; cursor: default;">Nome:</p>
+<input type="text" [(ngModel)]="produto.nome"><br/>
+
+<p style="font: menu; font-size: 18px; margin: 5px; cursor: default;">Preço:</p>
+<input type="number" [(ngModel)]="produto.preco"><br/>
+
+<button (click)="salvarProduto()">Salvar</button>
+<button (click)="cancelar()">Cancelar</button>
+
+</div>

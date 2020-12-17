@@ -1,0 +1,22 @@
+<br/>
+<div class="filtro">
+<p style="font: menu; font-size: 18px; margin: 5px; cursor: default;">Preço (maior que):</p>
+<input type='number' [(ngModel)]="preco"><br />
+</div>
+<table style="margin-top: 10px">
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>PREÇO</th>
+        <th colspan="2" style="text-align: center"></th>
+    </tr>
+
+    <tr *ngFor='let prod of (produtos|filtroPreco:preco)'>
+        <td style="width: 10px;">{{prod._id}}</td>
+        <td>{{prod.nome}}</td>
+        <td>{{prod.preco | moeda}}</td>
+        <td style="width: 10px;"><a id="actions" [routerLink]="'/edit/'+prod._id">Editar</a></td>
+        <td style="width: 10px;"><a id="actions" [routerLink]="'/tabela'" (click)="deletar(prod._id)">Excluir</a> </td>    
+    </tr>
+</table>
+
